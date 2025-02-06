@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PNG to SVG Converter (No Auto-Clear Message)</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- 상단 헤더 -->
+  <header>
+    <div class="logo-area">
+      <h1>png to svg</h1>
+    </div>
+  </header>
+
+  <!-- Hero 배너 -->
+  <section class="hero-section">
+    <img 
+      src="./banner.png" 
+      alt="Main Banner" />
+    <div class="hero-text">
+      <h2>CHANGE GOOD THINGS</h2>
+      <div class="button-group">
+        <button>NEW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 메뉴 -->
+  <nav class="menu-area">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Lookbook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </nav>
+
+  <!-- 업로드 + 변환 (크게, 미리보기 없음) -->
+  <main>
+    <section class="upload-section">
+      <div class="upload-dropzone" id="dropzone">
+        <div class="cloud-icon">☁</div>
+        <p class="drop-text">Drop files here</p>
+        <button id="chooseBtn">Choose Files</button>
+        <p class="or-text">or click to upload</p>
+        <div class="external-sources">
+          <a href="#">Enter URL</a> | 
+          <a href="#">Dropbox</a> | 
+          <a href="#">Google Drive</a>
+        </div>
+      </div>
+      <input type="file" id="fileInput" accept="image/png,image/jpeg" multiple style="display:none;" />
+    </section>
+
+    <!-- 메시지 (처음엔 "Waiting for next job..." 로 초기화해둬도 됨) -->
+    <div id="attachmentMessage" class="attachment-message">
+      Waiting for next job...
+    </div>
+
+    <!-- 변환/다운로드 버튼 -->
+    <div class="conversion-area">
+      <button id="startConversionBtn" disabled>Start Conversion</button>
+      <button id="downloadBtn" disabled>Download</button>
+    </div>
+
+    <!-- 로딩바 & 퍼센트 표시 -->
+    <div class="progress-container" id="progressContainer" style="display:none;">
+      <div class="progress-bar" id="progressBar"></div>
+      <span class="progress-text" id="progressText">0%</span>
+    </div>
+  </main>
+
+  <!-- 설명 섹션 -->
+  <section class="description-section">
+    <p>
+      Welcome to our PNG-to-SVG converter!
+This service seamlessly transforms your PNG files into clean, resolution-independent vector graphics.
+    </p>
+    <p>
+      Enjoy a faster, more straightforward workflow with our efficient PNG-to-SVG tool, designed to make your experience as smooth as possible!
+    </p>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>© 2023 PNG to SVG Converter</p>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

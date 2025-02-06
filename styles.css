@@ -1,0 +1,264 @@
+/* styles.css */
+
+/* 공통 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* 헤더 */
+  header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+  }
+  .logo-area h1 {
+    font-size: 1.8rem;
+    color: #ff7043;
+  }
+  
+  /* Hero */
+  .hero-section {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .hero-section img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  .hero-text .button-group button {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  .hero-text .button-group button:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* 메뉴 */
+  .menu-area {
+    background: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .menu-area ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+  }
+  .menu-area li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .menu-area li a:hover {
+    color: #ff7043;
+  }
+  
+  /* 메인 */
+  main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* 업로드 섹션 */
+  .upload-section {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+  }
+  .upload-dropzone {
+    border: 2px dashed #4aa96c;
+    background: #c8efd9;
+    border-radius: 16px;
+    padding: 60px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .upload-dropzone:hover {
+    background: #b7e8cc;
+  }
+  .cloud-icon {
+    font-size: 4rem;
+    color: #4aa96c;
+    margin-bottom: 20px;
+  }
+  .drop-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3d8c59;
+    margin-bottom: 15px;
+  }
+  #chooseBtn {
+    background: #fff;
+    color: #4aa96c;
+    border: 2px solid #4aa96c;
+    padding: 12px 20px;
+    font-size: 1.05rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  #chooseBtn:hover {
+    background: #eaf8f0;
+  }
+  .or-text {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  .external-sources a {
+    color: #147769;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 5px;
+  }
+  .external-sources a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 메시지 */
+  .attachment-message {
+    margin-bottom: 10px;
+    color: #256039;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  /* 변환/다운로드 버튼 */
+  .conversion-area {
+    margin: 30px 0;
+  }
+  #startConversionBtn {
+    background: #4aa96c;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #startConversionBtn:hover:not(:disabled) {
+    background: #3d8c59;
+  }
+  #downloadBtn {
+    background: #3f51b5;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  #downloadBtn:hover:not(:disabled) {
+    background: #3949ab;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* 진행률 표시 */
+  .progress-container {
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #4aa96c;
+    width: 0%;
+    transition: width 0.1s;
+  }
+  .progress-text {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+  
+  /* 설명 섹션 */
+  .description-section {
+    max-width: 700px;
+    margin: 30px auto 40px auto;
+    color: #444;
+    text-align: center;
+    line-height: 1.7;
+    padding: 0 20px;
+  }
+  .description-section p {
+    margin-bottom: 15px;
+  }
+  
+  /* 푸터 */
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    background: #fff;
+  }
+  
+  /* 드래그 앤 드롭 효과 */
+  .upload-dropzone.dragover {
+    background: #b7e8cc;
+  }
+  
+  /* 반응형 */
+  @media (max-width: 600px) {
+    #chooseBtn {
+      font-size: 0.9rem;
+    }
+    #startConversionBtn,
+    #downloadBtn {
+      font-size: 0.9rem;
+    }
+    .cloud-icon {
+      font-size: 3rem;
+    }
+    .upload-dropzone {
+      padding: 40px;
+    }
+  }
+  
